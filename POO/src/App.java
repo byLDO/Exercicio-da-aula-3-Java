@@ -1,6 +1,6 @@
 public class App {
     public static void main(String[] args) throws Exception {
-        Cachorro Lilo = new Cachorro("Lilo");
+        Cachorro Lilo = new Cachorro("Lilo", "Vira-lata");
         Lilo.description();
 
         System.out.println("Execução terminada");
@@ -19,8 +19,9 @@ class Cachorro {
     private boolean hasVaccine;
     private float imc;
 
-    public Cachorro (String name) {
+    public Cachorro (String name, String race) {
         this.name = name;
+        this.race = "Vira-lata";
         this.size = 0.50f;
         this.sex = "Feminino";
         this.weight = 10f;
@@ -48,7 +49,7 @@ class Cachorro {
     }
 
     public void description() {
-        System.out.println("Essa é a " + this.name + ". Ela tem a altura de " + this.size * 100 + " cm" + " e é do sexo " + this.sex + "da raça" + this.race);
+        System.out.println("Essa é a " + this.name + ". Ela tem " + this.size * 100 + " cm de altura" + ", é do sexo " + this.sex + " e da raça " + this.race);
         System.out.println(this.imc);
     }
 }
